@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de salaire</title>
+
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        #Affiche {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            width: 500px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        input,
+        select {
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all .3s;
+            width: 100%;
+        }
+
+        #save {
+            background-color: rgb(49, 161, 49);
+            color: white;
+        }
+
+        #save:hover {
+            background-color: rgb(11, 36, 11);
+        }
+
+        #btn {
+            background-color: rgb(66, 116, 223);
+            color: white;
+        }
+
+        #btn:hover {
+            background-color: rgb(22, 37, 68);
+        }
+
+        .action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form>
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name">
+            <label for="subname">Prenom</label>
+            <input type="text" id="subname">
+            <label for="age">Age</label>
+            <input type="number" id="age">
+            <label for="sex">Sexe</label>
+            <select name="sex" id="sex">
+                <option>Homme</option>
+                <option>Femme</option>
+            </select>
+            <label for="salaire">Salaire</label>
+            <input type="number" id="salaire">
+            <label for="charge">Nombre de charge</label>
+            <input type="number" id="charge">
+            <div class="action">
+                <button id="save" type="button">Enregistrer</button>
+                <button id="btn" type="button">Calculer</button>
+            </div>
+        </form>
+        <div id="Affiche"></div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
